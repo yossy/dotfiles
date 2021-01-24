@@ -3,10 +3,15 @@
 ## Usage
 
 ```bash
-$ git clone https://github.com/yossy0806/dotfiles.git
-$ ./dotfiles/setup.sh
+git clone https://github.com/yossy0806/dotfiles.git
+cd dotfiles
+./setup.sh
 ```
 
-## VSCode
+## Install only the vscode environment
 
-~/dotfiles/.vscode/vscode_install.shを実行
+```bash
+git clone https://github.com/yossy0806/dotfiles.git
+cd dotfiles
+./.vscode/vscode_install.sh
+```
