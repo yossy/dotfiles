@@ -5,7 +5,7 @@
 ```bash
 git clone https://github.com/yossy0806/dotfiles.git
 cd dotfiles
-./setup.sh
+./install.sh
 ```
 
 ## Install only the vscode environment

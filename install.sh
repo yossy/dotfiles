@@ -1,15 +1,21 @@
 #!/bin/zsh
 
 SCRIPT_DIR=$(cd $(dirname $0) && pwd)
-DOT_FILES=(.vimrc .zshenv .zprofile .zshrc .zlogin .zlogout .zpreztorc .zprezto)
+
+echo "start setup..."
 
 # add symlink dotfiles
-for file in ${DOT_FILES[@]}
+for f in .??*
 do
-  ln -sf $HOME/dotfiles/$file $HOME/$file
+  [ "$f" = ".git" ] && continue
+  [ "$f" = ".gitignore" ] && continue
+  [ "$f" = ".gitmodules" ] && continue
+  [ "$f" = ".DS_Store" ] && continue
+
+  ln -sf $HOME/dotfiles/$f $HOME/$f
 done
 
-# add submodule
+# add submodule for zprezto
 git submodule update --init --recursive
 
 # prezto
@@ -24,9 +30,7 @@ chsh -s $(which zsh)
 source $SCRIPT_DIR/.zshrc
 source $SCRIPT_DIR/.zpreztorc
 
-# vscodeのinstall
+# install vscode extensions
 "${SCRIPT_DIR}/.vscode/vscode_install.sh"
-
-echo Done
 
 zsh
