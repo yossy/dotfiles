@@ -16,3 +16,6 @@ do
 done
 
 code --list-extensions > "${SCRIPT_DIR}/extensions"
+
+# VSCodeVimでNomalMode切り替え時に英数入力に変更するためim-selectをinstallする。
+curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_mac.sh | sh
