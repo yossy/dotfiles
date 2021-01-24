@@ -1,6 +1,8 @@
 "---------- Pluginの管理 ----------"
 " vim-plugでのpluginの導入
 " 参考：https://github.com/junegunn/vim-plug
+" Usage:
+"   vimを開き':PlugInstall'でpluginのinstall
 call plug#begin('~/.vim/plugged')
 
 " Material theme
