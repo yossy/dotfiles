@@ -1,7 +1,6 @@
+"---------- Pluginの管理 ----------"
 " vim-plugでのpluginの導入
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
+" 参考：https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
 " Material theme
@@ -16,6 +15,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go'
 
 call plug#end()
+"---------- Pluginの管理 ----------"
 
 " kaicataldo/material.vim
 let g:material_terminal_italics = 1
