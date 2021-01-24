@@ -27,4 +27,6 @@ source $SCRIPT_DIR/.zpreztorc
 # vscodeのinstall
 "${SCRIPT_DIR}/.vscode/vscode_install.sh"
 
-echo "Done"
+echo Done
+
+zsh
