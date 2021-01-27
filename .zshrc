@@ -5,13 +5,14 @@
 #                          (_)___|___/_| |_|_|  \___|
 #
 
+
+
 ### Global
 PATH="$PATH:~/bin"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export EDITOR=vim
 export LANG=en_US.UTF-8
-
 
 # ---------- alias ---------- #
 # ghqで管理しているファイルのpathをpecoで検索して出力
@@ -23,6 +24,15 @@ alias vs='code $(repos)'
 alias ghw='gh repo view -w $(ghq list | peco)'
 alias lsa="ls -la"
 # ---------- alias ---------- #
+
+# ---------- Setup Prezto ---------- #
+# github: https://github.com/sorin-ionescu/prezto
+# Source Prezto.
+# NOTE: pecoの読み込みの前に必要。
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+# ---------- Setup Prezto ---------- #
 
 # ---------- Setup peco ---------- #
 function peco-history-selection() {
@@ -51,10 +61,4 @@ if [ -f '/Users/taiki/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/taiki/goo
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/taiki/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/taiki/google-cloud-sdk/completion.zsh.inc'; fi
 
-# ---------- Setup Prezto ---------- #
-# github: https://github.com/sorin-ionescu/prezto
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
- source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-# ---------- Setup Prezto ---------- #
+
