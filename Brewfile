@@ -12,15 +12,9 @@ brew "git"
 brew "git-secrets"
 brew "go"
 brew "golang-migrate"
-brew "imagemagick"
 brew "jq"
-brew "mysql@5.6", restart_service: true
 brew "p7zip"
 brew "peco"
-brew "readline", link: true
-brew "postgresql", restart_service: true
-brew "sqlite"
-brew "rbenv"
 brew "ruby"
 brew "telnet"
 brew "tmux"
