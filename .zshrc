@@ -10,7 +10,7 @@
 ### Global
 PATH="$PATH:~/bin"
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:$HOME/.anyenv/bin
 export EDITOR=vim
 export LANG=en_US.UTF-8
 
@@ -52,13 +52,14 @@ function history-all { history -E 1 }
 autoload -U compinit
 compinit
 
-# anyenv に必要
+# ---------- Setup anyenv ---------- #
 eval "$(anyenv init -)"
+# ---------- Setup anyenv ---------- #
 
+# ---------- Setup Google Cloud SDK ---------- #
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/taiki/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/taiki/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/taiki/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/taiki/google-cloud-sdk/completion.zsh.inc'; fi
-
-
+# ---------- Setup Google Cloud SDK ---------- #
