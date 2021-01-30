@@ -51,6 +51,9 @@
             "after": ["<Esc>"]
         }
     ],
+    "vim.handleKeys": {
+        "<C-a>": false
+    },
     "workbench.iconTheme": "material-icon-theme",
     "explorer.confirmDragAndDrop": false,
     "ruby.intellisense": "rubyLocate",
