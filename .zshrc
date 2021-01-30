@@ -53,7 +53,7 @@ autoload -U compinit
 compinit
 
 # ---------- Setup anyenv ---------- #
-eval "$(anyenv init -)"
+eval "$(anyenv init - --no-rehash)"
 # ---------- Setup anyenv ---------- #
 
 # ---------- Setup Google Cloud SDK ---------- #
