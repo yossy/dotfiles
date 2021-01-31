@@ -85,7 +85,7 @@ deploy() {
 if [ "$1" = "deploy" -o "$1" = "d" ]; then
   deploy
 elif [ "$1" = "init" -o "$1" = "i" ]; then
-  initalize
+  initialize
 elif [ "$1" = "help" -o "$1" = "h" ]; then
   usage
 else
