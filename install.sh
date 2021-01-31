@@ -30,7 +30,7 @@ initialize() {
   fi
 
   if has "brew"; then
-    brew bundle dump
+    brew bundle
   fi
 
   initialize_anyenv() {
