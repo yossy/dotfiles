@@ -89,5 +89,6 @@ elif [ "$1" = "init" -o "$1" = "i" ]; then
 elif [ "$1" = "help" -o "$1" = "h" ]; then
   usage
 else
-  usage
+  initialize
+  deploy
 fi
