@@ -41,6 +41,11 @@ initialize() {
   }
   initialize_anyenv
 
+  initialize_git-secrets() {
+    git secrets --register-aws --global
+  }
+  initialize_git-secrets
+
   git submodule update --init --recursive
 
   # install vscode extensions
