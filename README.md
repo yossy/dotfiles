@@ -3,7 +3,7 @@
 ## Usage
 
 ```bash
-git clone https://github.com/yossy0806/dotfiles.git
+git clone https://github.com/yossy/dotfiles.git
 cd dotfiles
 ./install.sh initialize
 ./install.sh deploy
