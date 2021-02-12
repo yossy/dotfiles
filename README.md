@@ -14,6 +14,20 @@ execute initialize and deploy
 curl -L raw.github.com/yossy/dotfiles/main/install.sh | zsh -s init
 ```
 
+If you have already git clone
+
+execute deploy
+
+```bash
+make deploy
+```
+
+execute initialize
+
+```bash
+make init
+```
+
 ## managed package
 
 update Brewfile

@@ -14,7 +14,7 @@ deploy: ## Create symlink to home directory
 	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
 
 init: ## Download dotfiles
-	@DOTPATH=$(DOTPATH) zsh $(DOTPATH)/install.sh i
+	@DOTPATH=$(DOTPATH) zsh $(DOTPATH)/install.sh init
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
