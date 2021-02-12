@@ -1,6 +1,8 @@
 #!/bin/zsh
 
 SCRIPT_DIR=$(cd $(dirname $0) && pwd)
+DOTPATH=~/dotfiles
+DOTFILES_GITHUB=https://github.com/yossy/dotfiles.git
 
 has() {
   type "$1" > /dev/null 2>&1
@@ -22,16 +24,44 @@ EOF
 }
 
 initialize() {
-  if has "brew"; then
-    echo "$(tput setaf 2)Already installed Homebrew ✔︎$(tput sgr0)"
-  else
-    echo "Installing Homebrew..."
-    /bin/bash -i "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  fi
+  download_dotfiles() {
+    # gitが使えるならgitでclone
+    if has "git"; then
+      git clone --recursive "$DOTFILES_GITHUB" "$DOTPATH"
 
-  if has "brew"; then
-    brew bundle
-  fi
+    # gitがない場合はcurlでdownload
+    elif has "curl"; then
+      target="https://github.com/yossy/dotfiles/archive/main.tar.gz"
+      curl -L "$target" | tar zxv
+      # 解凍したらdotfiles-mainなので$DOTPATHにrenameと移動
+      mv -f dotfiles-main "$DOTPATH"
+    else
+      die "curl or git required"
+    fi
+
+    cd "$DOTPATH"
+    if [ $? -ne 0 ]; then
+      die "not found: $DOTPATH"
+    fi
+
+    git submodule update --init --recursive
+  }
+  download_dotfiles
+
+  install_brew_pkg() {
+    if has "brew"; then
+    echo "$(tput setaf 2)Already installed Homebrew ✔︎$(tput sgr0)"
+
+    else
+      echo "Installing Homebrew..."
+      /bin/bash -i "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    fi
+
+    if has "brew"; then
+      brew bundle
+    fi
+  }
+  install_brew_pkg
 
   initialize_anyenv() {
     anyenv install --init
@@ -46,7 +76,14 @@ initialize() {
   }
   initialize_git-secrets
 
-  git submodule update --init --recursive
+  setup_prezto() {
+    # add submodule for zprezto
+    setopt EXTENDED_GLOB
+    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+    done
+  }
+  setup_prezto
 
   # install vscode extensions
   "${SCRIPT_DIR}/.vscode/vscode_install.sh"
@@ -57,7 +94,7 @@ initialize() {
   source $SCRIPT_DIR/.zshrc
   source $SCRIPT_DIR/.zpreztorc
 
-  echo "init"
+  echo "initialize done"
   zsh
 }
 
@@ -66,7 +103,6 @@ deploy() {
     for f in .??*
     do
       [ "$f" = ".git" ] && continue
-      [ "$f" = ".gitignore" ] && continue
       [ "$f" = ".gitmodules" ] && continue
       [ "$f" = ".DS_Store" ] && continue
 
@@ -74,15 +110,6 @@ deploy() {
     done
   }
   add_symlinks
-
-  setup_prezto() {
-    # add submodule for zprezto
-    setopt EXTENDED_GLOB
-    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-    done
-  }
-  setup_prezto
 
   echo "deploy"
 }
@@ -94,6 +121,5 @@ elif [ "$1" = "init" -o "$1" = "i" ]; then
 elif [ "$1" = "help" -o "$1" = "h" ]; then
   usage
 else
-  initialize
-  deploy
+  usage
 fi
