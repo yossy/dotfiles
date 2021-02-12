@@ -15,3 +15,11 @@ cd ~/dotfiles
 rm Brewfile
 brew bundle dump
 ```
+
+update VSCode extensions
+
+```bash
+cd ~/dotfiles
+rm ./.vscode/extensions
+code --list-extensions > ./.vscode/extensions
+```
