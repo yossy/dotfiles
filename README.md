@@ -3,10 +3,7 @@
 ## Usage
 
 ```bash
-git clone https://github.com/yossy/dotfiles.git
-cd dotfiles
-./install.sh initialize
-./install.sh deploy
+curl -L raw.github.com/yossy/dotfiles/main/install.sh | bash
 ```
 
 ## managed package
