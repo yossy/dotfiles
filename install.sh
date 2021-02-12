@@ -94,8 +94,7 @@ initialize() {
   source $SCRIPT_DIR/.zshrc
   source $SCRIPT_DIR/.zpreztorc
 
-  echo "initialize done"
-  zsh
+  echo "Initialize successfully."
 }
 
 deploy() {
@@ -111,7 +110,7 @@ deploy() {
   }
   add_symlinks
 
-  echo "deploy"
+  echo "Deployed successfully."
 }
 
 if [ "$1" = "deploy" -o "$1" = "d" ]; then
