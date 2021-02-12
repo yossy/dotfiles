@@ -8,6 +8,10 @@ has() {
   type "$1" > /dev/null 2>&1
 }
 
+success_msg() {
+  echo "$(tput setaf 2)"$1"$(tput sgr0)"
+}
+
 usage() {
   name=`basename $0`
   cat <<EOF
@@ -50,7 +54,7 @@ initialize() {
 
   install_brew_pkg() {
     if has "brew"; then
-    echo "$(tput setaf 2)Already installed Homebrew ✔︎$(tput sgr0)"
+    success_msg "Already installed Homebrew ✔︎"
 
     else
       echo "Installing Homebrew..."
@@ -79,8 +83,7 @@ initialize() {
   setup_prezto() {
     # add submodule for zprezto
     setopt EXTENDED_GLOB
-    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N)
-    do
+    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
       ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
     done
   }
@@ -95,23 +98,13 @@ initialize() {
   source $SCRIPT_DIR/.zshrc
   source $SCRIPT_DIR/.zpreztorc
 
-  echo "Initialize successfully."
+  success_msg "Initialize successfully ✔"
 }
 
 deploy() {
-  add_symlinks() {
-    for f in .??*
-    do
-      [ "$f" = ".git" ] && continue
-      [ "$f" = ".gitmodules" ] && continue
-      [ "$f" = ".DS_Store" ] && continue
-
-      ln -sf $HOME/dotfiles/$f $HOME/$f
-    done
-  }
-  add_symlinks
-
-  echo "Deployed successfully."
+  make deploy
+  echo ""
+  success_msg "Deployed successfully ✔︎"
 }
 
 if [ "$1" = "deploy" -o "$1" = "d" ]; then
