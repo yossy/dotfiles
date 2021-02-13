@@ -16,6 +16,14 @@ deploy: ## Create symlink to home directory
 init: ## Download dotfiles
 	@DOTPATH=$(DOTPATH) zsh $(DOTPATH)/install.sh init
 
+update_brewfile: ## Update Brewfile
+	@rm -f $(DOTPATH)/Brewfile
+	@brew bundle dump
+
+update_vscode_extensions: ## Update VSCode extensions
+	@rm -f $(DOTPATH)/.vscode/extensions
+	@code --list-extensions > $(DOTPATH)/.vscode/extensions
+
 help: ## Show make usage
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
 		| sort \
