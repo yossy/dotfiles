@@ -34,14 +34,12 @@ update Brewfile
 
 ```bash
 cd ~/dotfiles
-rm Brewfile
-brew bundle dump
+make update_brewfile
 ```
 
 update VSCode extensions
 
 ```bash
 cd ~/dotfiles
-rm ./.vscode/extensions
-code --list-extensions > ./.vscode/extensions
+make update_vscode_extensions
 ```
