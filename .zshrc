@@ -6,7 +6,6 @@
 #
 
 
-
 ### Global
 PATH="$PATH:~/bin"
 export GOPATH=$HOME/go
@@ -24,6 +23,10 @@ alias vs='code $(repos)'
 alias ghw='gh repo view -w $(ghq list | peco)'
 alias lsa="ls -la"
 # ---------- alias ---------- #
+
+# ---------- Setup Rust --------- #
+source "$HOME/.cargo/env"
+# ---------- Setup Rust --------- #
 
 # ---------- Setup Prezto ---------- #
 # github: https://github.com/sorin-ionescu/prezto
