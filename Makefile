@@ -21,8 +21,8 @@ update_brewfile: ## Update Brewfile
 	@brew bundle dump
 
 update_vscode_extensions: ## Update VSCode extensions
-	@rm -f $(DOTPATH)/.vscode/extensions
-	@code --list-extensions > $(DOTPATH)/.vscode/extensions
+	@rm -f $(DOTPATH)/vscode/extensions.txt
+	@code --list-extensions > $(DOTPATH)/vscode/extensions.txt
 
 help: ## Show make usage
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
