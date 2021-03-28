@@ -7,12 +7,14 @@ donjayamanne.githistory
 eamodio.gitlens
 Equinusocio.vsc-community-material-theme
 Equinusocio.vsc-material-theme
+equinusocio.vsc-material-theme-icons
 GitHub.github-vscode-theme
 GitHub.vscode-pull-request-github
 golang.go
 hnw.vscode-auto-open-markdown-preview
 humao.rest-client
 jebbs.plantuml
+jock.svg
 kaiwood.endwise
 kumar-harsh.graphql-for-vscode
 marp-team.marp-vscode
@@ -30,6 +32,7 @@ redhat.vscode-yaml
 ripwu.protobuf-helper
 serayuzgur.crates
 shd101wyy.markdown-preview-enhanced
+sianglim.slim
 sporto.rails-go-to-spec
 vincaslt.highlight-matching-tag
 vscodevim.vim

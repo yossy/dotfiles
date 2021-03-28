@@ -57,4 +57,12 @@
     "workbench.iconTheme": "material-icon-theme",
     "explorer.confirmDragAndDrop": false,
     "ruby.intellisense": "rubyLocate",
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": "{{put-password-here}}"
+        }
+    ],
 }
