@@ -1,4 +1,4 @@
-# dotfiles
+# Dotfiles
 
 ## Usage
 
@@ -28,7 +28,7 @@ execute initialize
 make init
 ```
 
-## managed package
+## Managed package
 
 update Brewfile
 
@@ -43,3 +43,7 @@ update VSCode extensions
 cd ~/dotfiles
 make update_vscode_extensions
 ```
+
+## Dependencies
+
+- [Ultimate vimrc](https://github.com/amix/vimrc)
