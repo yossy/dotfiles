@@ -22,6 +22,7 @@ alias vs='code $(repos)'
 # 選択したリポジトリをWebのGithubで開く
 alias ghw='gh repo view -w $(ghq list | peco)'
 alias lsa="ls -la"
+alias cab="/usr/local/bin/cabextract -e SJIS"
 # ---------- alias ---------- #
 
 # ---------- Setup Rust --------- #
@@ -59,7 +60,12 @@ compinit
 eval "$(anyenv init - --no-rehash)"
 # ---------- Setup anyenv ---------- #
 
-# ---------- Setup Google Cloud SDK ---------- #
+# ---------- Setup direnv ---------- #
+eval "$(direnv hook zsh)"
+# ---------- Setup direnv ---------- #
+
+# ---------- Setup Google Cloud SDK ---------- ## ---------- Setup Google Cloud SDK ---------- #
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/taiki/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/taiki/google-cloud-sdk/path.zsh.inc'; fi
 
