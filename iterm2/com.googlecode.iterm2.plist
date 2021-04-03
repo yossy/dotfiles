@@ -3314,7 +3314,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>NotoMonoForPowerline 20</string>
+			<string>NotoMonoForPowerline 24</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prevent Opening in a Tab</key>
