@@ -36,6 +36,17 @@ source "$HOME/.cargo/env"
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+# preztoのtheme'powerlevel9k'のための設定
+POWERLEVEL9K_MODE=nerdfont-complete
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+# promptを新しい行で入力できるように。
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# 出力のあと一行入れる。
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+# allowアイコンにする
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=" \U25B8 "
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 # ---------- Setup Prezto ---------- #
 
 # ---------- Setup peco ---------- #
