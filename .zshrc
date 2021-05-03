@@ -93,7 +93,7 @@ eval "$(anyenv init - --no-rehash)"
 eval "$(direnv hook zsh)"
 
 #=======================================
-# Setup Google Cloud SDK 
+# Setup Google Cloud SDK
 #=======================================
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/taiki/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/taiki/google-cloud-sdk/path.zsh.inc'; fi
