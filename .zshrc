@@ -38,8 +38,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 # preztoのtheme'powerlevel9k'のための設定
 POWERLEVEL9K_MODE=nerdfont-complete
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 # promptを新しい行で入力できるように。
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # 出力のあと一行入れる。
