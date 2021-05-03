@@ -105,7 +105,8 @@ if [ -f '/Users/taiki/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tai
 # Setup fzf
 #=======================================
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
+export FZF_DEFAULT_OPTS='--height 50% --reverse --border'
+export FZF_CTRL_T_OPTS='--preview "bat  --color=always --style=header,grid --line-range :100 {}"'
 # fzfでbranchを検索してcheckoutする
 fbr() {
   local branches branch

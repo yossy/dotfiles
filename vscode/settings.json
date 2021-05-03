@@ -3,7 +3,7 @@
     "files.autoSave": "onFocusChange",
     "files.trimTrailingWhitespace": true,
     "editor.tabSize": 2,
-    "workbench.colorTheme": "Community Material Theme Ocean High Contrast",
+    "workbench.colorTheme": "Tokyo Night",
     "workbench.editor.enablePreview": false,
     "go.useLanguageServer": true,
     "window.zoomLevel": 2,
