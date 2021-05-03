@@ -65,4 +65,5 @@
             "password": "{{put-password-here}}"
         }
     ],
+    "go.toolsManagement.autoUpdate": true,
 }
