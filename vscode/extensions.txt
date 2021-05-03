@@ -27,6 +27,7 @@ ms-vsliveshare.vsliveshare
 mushan.vscode-paste-image
 naumovs.color-highlight
 PKief.material-icon-theme
+quicktype.quicktype
 rebornix.ruby
 redhat.vscode-yaml
 ripwu.protobuf-helper
