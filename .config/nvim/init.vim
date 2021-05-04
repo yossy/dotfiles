@@ -3,10 +3,10 @@
 "=======================================
 call plug#begin('~/.vim/plugged')
 
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+" Vim alignment plugin.
 Plug 'junegunn/vim-easy-align'
 
-" snippets plugin
+" Snippets plugin
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " Show derectory tree
@@ -15,7 +15,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-" Incremental search
+" Interactive filter
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
@@ -83,6 +83,8 @@ set hidden
 set showcmd
 " yankしたときclipboardにもcopy(逆も)
 set clipboard+=unnamed
+" ファイル保存時に行末のspaceを削除
+autocmd BufWritePre * :%s/\s\+$//ge
 " ===== Setup =====
 
 " ===== Setup Keybinding =====
