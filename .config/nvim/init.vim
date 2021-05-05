@@ -116,6 +116,15 @@ cnoremap <C-p> <Up>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 cnoremap <C-d> <Del>
+" neovim terminal mapping
+if has('nvim')
+  " 新しいタブでターミナルを起動
+  nnoremap @t :tabe<CR>:terminal<CR>
+  " Ctrl + q でターミナルを終了
+  tnoremap <C-q> <C-\><C-n>:q<CR>
+  " ESCでターミナルモードからノーマルモードへ
+  tnoremap <ESC> <C-\><C-n>
+endif
 
 "=======================================
 " Setup Design
