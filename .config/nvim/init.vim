@@ -80,6 +80,7 @@ nmap ga <Plug>(EasyAlign)
 " fzf.vim
 "=======================================
 set rtp+=/usr/local/opt/fzf
+nnoremap <space><S-f> :Ag<CR>
 
 "=======================================
 " nerdtree
