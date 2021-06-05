@@ -87,7 +87,7 @@ nnoremap <space><S-f> :Ag<CR>
 "=======================================
 " NERDTreeでdotfilesも表示する
 let NERDTreeShowHidden=1
-nnoremap <space>n :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 "=======================================
 " vim-tags
