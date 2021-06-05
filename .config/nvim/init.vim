@@ -47,6 +47,10 @@ Plug 'airblade/vim-gitgutter'
 " Code Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" For Ruby
+" gemのsourceにとべるようにする
+Plug 'szw/vim-tags'
+
 " Initialize plugin system
 call plug#end()
 
@@ -82,6 +86,12 @@ set rtp+=/usr/local/opt/fzf
 "=======================================
 " NERDTreeでdotfilesも表示する
 let NERDTreeShowHidden=1
+
+"=======================================
+" vim-tags
+"=======================================
+let g:vim_tags_project_tags_command = "/usr/local/bin/ctags -R {OPTIONS} {DIRECTORY} 2>/dev/null"
+let g:vim_tags_gems_tags_command = "/usr/local/bin/ctags -R {OPTIONS} `bundle list --paths` 2>/dev/null"
 
 "=======================================
 " Setup
