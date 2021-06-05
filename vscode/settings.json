@@ -54,6 +54,7 @@
     "vim.handleKeys": {
         "<C-a>": false
     },
+    "vim.surround": true,
     "workbench.iconTheme": "material-icon-theme",
     "explorer.confirmDragAndDrop": false,
     "ruby.intellisense": "rubyLocate",
