@@ -9,5 +9,12 @@
     "key": "ctrl+;",
     "command": "workbench.action.focusFirstEditorGroup",
     "when": "terminalFocus"
+  },
+  // https://github.com/asvetliakov/vscode-neovim#custom-escape-keys
+  {
+    "command": "vscode-neovim.compositeEscape1",
+    "key": "j",
+    "when": "neovim.mode == insert && editorTextFocus",
+    "args": "j"
   }
 ]
