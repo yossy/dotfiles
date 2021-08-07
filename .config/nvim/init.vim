@@ -12,6 +12,9 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " Show derectory tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
+" File icons
+Plug 'ryanoasis/vim-devicons'
+
 " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
@@ -43,6 +46,9 @@ Plug 'tpope/vim-commentary'
 
 " Gitの追加・変更・削除を行番号の左で可視化
 Plug 'airblade/vim-gitgutter'
+
+" For Git commands
+Plug 'tpope/vim-fugitive'
 
 " Code Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
