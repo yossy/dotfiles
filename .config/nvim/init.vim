@@ -9,7 +9,7 @@ Plug 'junegunn/vim-easy-align'
 " Snippets plugin
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
-" Show derectory tree
+" Show directory tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " File icons
