@@ -6,9 +6,6 @@ call plug#begin('~/.vim/plugged')
 " Vim alignment plugin.
 Plug 'junegunn/vim-easy-align'
 
-" Snippets plugin
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
 " Show directory tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
