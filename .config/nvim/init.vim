@@ -53,6 +53,8 @@ Plug 'tpope/vim-fugitive'
 " Code Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'jiangmiao/auto-pairs'
+
 " For Ruby
 " gemのsourceにとべるようにする
 Plug 'szw/vim-tags'
