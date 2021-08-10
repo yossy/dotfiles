@@ -1,5 +1,6 @@
 apollographql.vscode-apollo
 Arjun.swagger-viewer
+asvetliakov.vscode-neovim
 castwide.solargraph
 CoenraadS.bracket-pair-colorizer-2
 DavidAnson.vscode-markdownlint
@@ -37,7 +38,6 @@ shd101wyy.markdown-preview-enhanced
 sianglim.slim
 sporto.rails-go-to-spec
 vincaslt.highlight-matching-tag
-vscodevim.vim
 wingrunr21.vscode-ruby
 wmaurer.change-case
 XadillaX.viml
