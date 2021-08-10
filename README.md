@@ -44,6 +44,3 @@ cd ~/dotfiles
 make update_vscode_extensions
 ```
 
-## Dependencies
-
-- [Ultimate vimrc](https://github.com/amix/vimrc)
