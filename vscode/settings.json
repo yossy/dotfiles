@@ -24,37 +24,6 @@
     "markdown-pdf.styles": [
         "/Users/taiki/Documents/Job/github-markdown.css"
     ],
-
-    //----------------------------------------------------------
-    // vscode vimの設定
-    //----------------------------------------------------------
-    "vim.useSystemClipboard": true, // systemのclipboardを使用します
-    "vim.hlsearch": true, // hlsearch
-    "vim.easymotion": true,
-    "vim.visualstar": true, // wordを* or + で検索する
-    "vim.useCtrlKeys": true,
-    "vim.ignorecase": true, // ignore case in search patterns.
-    "vim.incsearch": true, // show where a / search matches as you type it.
-    "vim.sneak": true, // enable the sneak plugin for vim.
-    "vim.leader": "<space>",
-    "vim.autoSwitchInputMethod.enable": true,
-    "vim.autoSwitchInputMethod.defaultIM": "com.google.inputmethod.Japanese.Roman",
-    "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
-    "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j", "j"],
-            "after": ["<Esc>"]
-        },
-        {
-            "before": ["っ", "j"],
-            "after": ["<Esc>"]
-        }
-    ],
-    "vim.handleKeys": {
-        "<C-a>": false
-    },
-    "vim.surround": true,
     "workbench.iconTheme": "material-icon-theme",
     "explorer.confirmDragAndDrop": false,
     "ruby.intellisense": "rubyLocate",
@@ -67,4 +36,6 @@
         }
     ],
     "go.toolsManagement.autoUpdate": true,
+    "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/taiki/.config/nvim/init.vim"
 }
