@@ -6,6 +6,8 @@ call plug#begin('~/.vim/plugged')
 " Vim alignment plugin.
 Plug 'junegunn/vim-easy-align'
 
+Plug 'easymotion/vim-easymotion'
+
 " Show directory tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
