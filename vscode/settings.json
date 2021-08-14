@@ -38,4 +38,5 @@
     "go.toolsManagement.autoUpdate": true,
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "/Users/taiki/.config/nvim/init.vim"
+    "terminal.integrated.fontFamily": "MesloLGS NF",
 }
