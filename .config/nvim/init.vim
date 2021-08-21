@@ -60,6 +60,9 @@ Plug 'jiangmiao/auto-pairs'
 " gemのsourceにとべるようにする
 Plug 'szw/vim-tags'
 
+" For reisizing of windows.
+Plug 'simeji/winresizer'
+
 " Initialize plugin system
 call plug#end()
 
