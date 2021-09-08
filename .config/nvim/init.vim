@@ -29,6 +29,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 " Plug 'ghifarit53/tokyonight-vim'
 " Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+" Plug 'marko-cerovac/material.nvim'
 
 " Status Bar
 Plug 'vim-airline/vim-airline'
@@ -116,6 +117,12 @@ colorscheme tokyonight
 " let g:material_theme_style = 'darker-community'
 " let g:material_terminal_italics = 1
 " let g:airline_theme = 'material'
+
+"=======================================
+" marko-cerovac/material.nvim
+"=======================================
+" let g:material_style = 'deep ocean'
+" colorscheme material
 
 "=======================================
 " nvim-treesitter/nvim-treesitter
