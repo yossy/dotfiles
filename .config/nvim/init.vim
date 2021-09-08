@@ -64,6 +64,9 @@ Plug 'szw/vim-tags'
 " For reisizing of windows.
 Plug 'simeji/winresizer'
 
+" Syntax highlighting.
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " Initialize plugin system
 call plug#end()
 
@@ -113,6 +116,19 @@ colorscheme tokyonight
 " let g:material_theme_style = 'darker-community'
 " let g:material_terminal_italics = 1
 " let g:airline_theme = 'material'
+
+"=======================================
+" nvim-treesitter/nvim-treesitter
+"=======================================
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    enable = true,
+    disable = {}
+  }
+}
+EOF
 
 "=======================================
 " vim-easy-align
