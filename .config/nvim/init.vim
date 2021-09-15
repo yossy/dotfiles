@@ -9,8 +9,14 @@ Plug 'junegunn/vim-easy-align'
 
 Plug 'easymotion/vim-easymotion'
 
-" Show directory tree
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Show File tree
+Plug 'lambdalisue/fern.vim'
+" File treeにgit statusを表示
+Plug 'lambdalisue/fern-git-status.vim'
+Plug 'lambdalisue/nerdfont.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+" apply colors on Nerd Fonts.
+Plug 'lambdalisue/glyph-palette.vim'
 
 " File icons
 Plug 'ryanoasis/vim-devicons'
@@ -113,19 +119,21 @@ nnoremap <silent> <leader>h :History<CR>
 nnoremap <silent> <leader>r :Rg<CR>
 
 "=======================================
-" nerdtree
+" fern
 "=======================================
-" NERDTreeでdotfilesも表示する
-let NERDTreeShowHidden=1
-nnoremap <C-n> :NERDTreeToggle<CR>
+let g:fern#default_hidden=1
+let g:fern#renderer = 'nerdfont'
+nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=40<CR>
 
-" Start NERDTree when Vim starts with a directory argument.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
-    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
-
-" Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+"=======================================
+" lambdalisue/glyph-palette.vim
+"=======================================
+" アイコンに色をつける
+augroup my-glyph-palette
+  autocmd! *
+  autocmd FileType fern call glyph_palette#apply()
+  autocmd FileType nerdtree,startify call glyph_palette#apply()
+augroup END
 
 "=======================================
 " vim-tags
