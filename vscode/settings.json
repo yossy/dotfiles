@@ -6,7 +6,6 @@
     "workbench.colorTheme": "Tokyo Night",
     "workbench.editor.enablePreview": false,
     "go.useLanguageServer": true,
-    "window.zoomLevel": 2,
     "editor.renderWhitespace": "boundary",
     "editor.minimap.enabled": false,
     "plantuml.server": "http://localhost:8080",
@@ -24,6 +23,36 @@
     "markdown-pdf.styles": [
         "/Users/taiki/Documents/Job/github-markdown.css"
     ],
+    //----------------------------------------------------------
+    // vscode vimの設定
+    //----------------------------------------------------------
+    "vim.useSystemClipboard": true, // systemのclipboardを使用します
+    "vim.hlsearch": true, // hlsearch
+    "vim.easymotion": true,
+    "vim.visualstar": true, // wordを* or + で検索する
+    "vim.useCtrlKeys": true,
+    "vim.ignorecase": true, // ignore case in search patterns.
+    "vim.incsearch": true, // show where a / search matches as you type it.
+    "vim.sneak": true, // enable the sneak plugin for vim.
+    "vim.leader": "<space>",
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.autoSwitchInputMethod.defaultIM": "com.google.inputmethod.Japanese.Roman",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["っ", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-a>": false
+    },
+    "vim.surround": true,
     "workbench.iconTheme": "material-icon-theme",
     "explorer.confirmDragAndDrop": false,
     "ruby.intellisense": "rubyLocate",
@@ -37,6 +66,7 @@
     ],
     "go.toolsManagement.autoUpdate": true,
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/taiki/.config/nvim/init.vim"
+    "vscode-neovim.neovimInitVimPaths.darwin": "/Users/taiki/.config/nvim/init.vim",
     "terminal.integrated.fontFamily": "MesloLGS NF",
+    "window.zoomLevel": 1
 }
