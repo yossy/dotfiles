@@ -29,6 +29,7 @@ alias vs='code $(repos)'
 alias ghw='gh repo view -w $(ghq list | fzf )'
 alias lsa="ls -la"
 alias cab="/usr/local/bin/cabextract -e SJIS"
+alias vi='nvim'
 alias vim="nvim"
 alias lg="lazygit"
 
