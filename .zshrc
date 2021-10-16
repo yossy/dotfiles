@@ -32,6 +32,7 @@ alias cab="/usr/local/bin/cabextract -e SJIS"
 alias vi='nvim'
 alias vim="nvim"
 alias lg="lazygit"
+alias dot="cd ~/dotfiles;nvim"
 
 #=======================================
 # Setup Functions
