@@ -239,6 +239,9 @@ let g:coc_global_extensions = [
       \, 'coc-solargraph'
       \, 'coc-yaml'
       \, 'coc-sql'
+      \, 'coc-vetur'
+      \, 'coc-eslint'
+      \, 'coc-prettier'
       \ ]
 
 " Give more space for displaying messages.
