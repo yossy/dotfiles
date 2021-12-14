@@ -67,6 +67,7 @@
     "go.toolsManagement.autoUpdate": true,
     "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "/Users/taiki/.config/nvim/init.vim",
+    "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "window.zoomLevel": 1
 }
