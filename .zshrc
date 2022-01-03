@@ -50,18 +50,6 @@ compinit
 source "$HOME/.cargo/env"
 
 #=======================================
-# Setup Prezto
-#=======================================
-# github: https://github.com/sorin-ionescu/prezto
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
- source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
-#=======================================
 # Setup lazygit
 #=======================================
 # lazygitでrepogitoryの変更を行った場合に変更が反映されるようにする
