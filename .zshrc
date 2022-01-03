@@ -98,3 +98,7 @@ fbr() {
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
 
+#=======================================
+# starship
+#=======================================
+eval "$(starship init zsh)"
