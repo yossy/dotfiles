@@ -27,6 +27,7 @@ alias cdp='cd $(repos)'
 alias vs='code $(repos)'
 # 選択したリポジトリをWebのGithubで開く
 alias ghw='gh repo view -w $(ghq list | fzf )'
+alias ls="exa"
 alias lsa="ls -la"
 alias cab="/usr/local/bin/cabextract -e SJIS"
 alias vi='nvim'
