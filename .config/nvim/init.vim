@@ -59,6 +59,9 @@ Plug 'airblade/vim-gitgutter'
 " For Git commands
 Plug 'tpope/vim-fugitive'
 
+" For GBrowse command, vim-fugitive required.
+Plug 'tpope/vim-rhubarb'
+
 " Plugin for calling lazygit from within neovim.
 Plug 'kdheepak/lazygit.nvim'
 
