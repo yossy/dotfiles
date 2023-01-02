@@ -73,6 +73,11 @@ Plug 'simeji/winresizer'
 " Syntax highlighting.
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+" For memo
+Plug 'glidenote/memolist.vim'
+" require https://github.com/mattn/memo
+Plug 'delphinus/telescope-memo.nvim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -362,3 +367,12 @@ let airline#extensions#coc#error_symbol = 'Error:'
 let airline#extensions#coc#warning_symbol = 'Warning:'
 let airline#extensions#coc#stl_format_err = '%E{[%e(#%fe)]}'
 let airline#extensions#coc#stl_format_warn = '%W{[%w(#%fw)]}'
+
+"=======================================
+" 'glidenote/memolist.vim'
+"=======================================
+let g:memolist_path = "~/Dropbox/memo"
+let g:memolist_memo_suffix = "md"
+nnoremap <Leader>mn  :MemoNew<CR>
+nnoremap <Leader>ml  :Telescope memo list<CR>
+nnoremap <Leader>mg  :Telescope memo grep<CR>
