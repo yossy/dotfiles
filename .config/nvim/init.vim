@@ -114,10 +114,31 @@ nmap ga <Plug>(EasyAlign)
 " telescope.nvim
 "=======================================
 " Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files hidden=true<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <C-p> <cmd>Telescope find_files hidden=true<cr>
+nnoremap <leader>f <cmd>Telescope find_files hidden=true<cr>
+nnoremap <leader>g <cmd>Telescope git_files<cr>
+nnoremap <leader>r <cmd>Telescope live_grep<cr>
+nnoremap <leader>b <cmd>Telescope buffers<cr>
+nnoremap <leader>c <cmd>Telescope command_history<cr>
+
+lua << EOF
+--ref: https://github.com/nvim-telescope/telescope.nvim/issues/855#issuecomment-1032325327
+require('telescope').setup{
+  defaults = {
+    file_ignore_patterns = {
+      'node_modules',
+      '.git'
+    }
+  },
+  pickers = {
+    live_grep = {
+      additional_args = function(opts)
+        return {"--hidden"}
+      end
+    }
+  }
+}
+EOF
 
 "=======================================
 " fern
