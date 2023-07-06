@@ -78,8 +78,16 @@ Plug 'glidenote/memolist.vim'
 " require https://github.com/mattn/memo
 Plug 'delphinus/telescope-memo.nvim'
 
+" For translate
+Plug 'voldikss/vim-translator'
+
 " Initialize plugin system
 call plug#end()
+
+"=======================================
+" voldikss/vim-translator
+"=======================================
+let g:translator_target_lang = "ja"
 
 "=======================================
 " folke/tokyonight.nvim
@@ -87,6 +95,7 @@ call plug#end()
 let g:tokyonight_style = "night"
 let g:tokyonight_italic_functions = 1
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+let g:lightline = {'colorscheme': 'tokyonight'}
 
 " Load the colorscheme
 colorscheme tokyonight
@@ -160,7 +169,7 @@ augroup END
 "=======================================
 " lazygit.nvim
 "=======================================
-let g:lazygit_floating_window_winblend = 0 " transparency of floating window
+let g:lazygit_floating_window_winblend = 10 " transparency of floating window
 let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
 let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
 let g:lazygit_floating_window_use_plenary = 0 " use plenary.nvim to manage floating window if available
