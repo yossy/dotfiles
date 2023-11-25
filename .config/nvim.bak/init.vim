@@ -81,8 +81,18 @@ Plug 'delphinus/telescope-memo.nvim'
 " For translate
 Plug 'voldikss/vim-translator'
 
+" For markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
 " Initialize plugin system
 call plug#end()
+
+"=======================================
+" copilot.nvim
+"=======================================
+let g:copilot_filetypes = {
+      \ '*': v:true,
+      \ }
 
 "=======================================
 " voldikss/vim-translator
@@ -171,7 +181,7 @@ augroup END
 "=======================================
 let g:lazygit_floating_window_winblend = 10 " transparency of floating window
 let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
-let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
+let g:lazygit_floating_window_border_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
 let g:lazygit_floating_window_use_plenary = 0 " use plenary.nvim to manage floating window if available
 let g:lazygit_use_neovim_remote = 1 " fallback to 0 if neovim-remote is not installed
 " setup mapping to call :LazyGit
@@ -290,6 +300,7 @@ let g:coc_global_extensions = [
       \, 'coc-vetur'
       \, 'coc-eslint'
       \, 'coc-prettier'
+      \, 'coc-go'
       \ ]
 
 " Give more space for displaying messages.
