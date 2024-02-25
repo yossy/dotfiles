@@ -9,8 +9,6 @@
 # Setup Environments
 #=======================================
 PATH="$PATH:~/bin"
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin:$HOME/.anyenv/bin
 export EDITOR=vim
 export LANG=en_US.UTF-8
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -69,11 +67,6 @@ function lg {
           rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
   fi
 }
-
-#=======================================
-# Setup anyenv
-#=======================================
-eval "$(anyenv init - --no-rehash)"
 
 #=======================================
 # Setup direnv
