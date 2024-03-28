@@ -4,7 +4,7 @@
 
 -- Disable autoformat
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "yaml" },
+  pattern = { "yaml", "typescript", "terraform" },
   callback = function()
     vim.b.autoformat = false
   end,
