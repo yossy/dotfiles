@@ -35,7 +35,7 @@ cursor-style = block
 window-padding-x = 10
 window-padding-y = 0
 window-padding-balance = true
-fullscreen
+fullscreen = true
 macos-non-native-fullscreen = true
 macos-window-buttons = hidden
 macos-titlebar-style = hidden
